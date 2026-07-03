@@ -4,17 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Active Shift Software</title>
-  <meta name="description" content="Active Shift Software — shift scheduling and task tracking built for operations teams." />
+  <meta name="description" content="Active Shift Software — modern web solutions for public safety operations, tracking, and logistics." />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header class="as-navbar">
     <div class="container">
-      <a href="#top" class="as-brand">Active<span class="as-brand-accent">Shift</span> Software</a>
+      <a href="#top" class="as-brand">
+        <img src="logo.png" alt="Active Shift Software Logo" style="height: 40px; width: auto;">
+      </a>
       <nav class="as-nav-links">
         <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
         <a href="#waitlist" class="as-nav-cta">Join Waitlist</a>
       </nav>
     </div>
@@ -22,11 +24,10 @@
 
   <section class="as-hero" id="top">
     <div class="container">
-      <span class="as-hero-eyebrow">Now in private beta</span>
-      <h1>Run your shifts on <span class="as-brand-accent">Active Shift</span> Software</h1>
+      <h1>Built for Public Safety. Engineered for Precision.</h1>
       <p>
-        Scheduling, task tracking, and sign-off — all in one place built for
-        teams who work in shifts, not sprints.
+        Modern web solutions designed to streamline operations, tracking, and logistics
+        for first responders and public safety agencies.
       </p>
       <div class="as-hero-actions">
         <a href="#waitlist" class="as-btn as-btn-primary">Join the Waitlist</a>
@@ -39,39 +40,29 @@
     <div class="container">
       <div class="as-section-header">
         <span class="as-eyebrow">Features</span>
-        <h2>Everything a shift team needs</h2>
-        <p>Built to replace scattered spreadsheets, group chats, and paper sign-off sheets.</p>
+        <h2>Our Product Line</h2>
+        <p>Purpose-built software solving real operational problems inside public safety agencies.</p>
       </div>
       <div class="as-features-grid">
-        <div class="as-card">
-          <div class="as-feature-icon">1</div>
-          <h3>Live Shift Scheduling</h3>
-          <p>Build and publish shift schedules in minutes, with instant visibility for the whole team.</p>
+        <div class="as-card as-feature-card" data-modal="apparatus" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="as-card-badge is-live">In Production / Active Beta</span>
+          <h3>NFC Daily Apparatus Check</h3>
+          <p>Secure NFC tap verification for every compartment and tool on the rig, with real-time shift dashboards.</p>
         </div>
-        <div class="as-card">
-          <div class="as-feature-icon">2</div>
-          <h3>Task Tracking &amp; Sign-off</h3>
-          <p>Assign tasks per shift and require digital sign-off, so nothing falls through the cracks.</p>
+        <div class="as-card as-feature-card" data-modal="logistics" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="as-card-badge is-live">In Production / Active Beta</span>
+          <h3>Station Order Logistics</h3>
+          <p>Frictionless web-based ordering that routes supply, maintenance, and equipment requests straight to logistics.</p>
         </div>
-        <div class="as-card">
-          <div class="as-feature-icon">3</div>
-          <h3>Progress at a Glance</h3>
-          <p>Real-time progress bars and status badges show exactly where every shift stands.</p>
+        <div class="as-card as-feature-card" data-modal="taskbooks" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="as-card-badge is-soon">Coming Late Summer</span>
+          <h3>Customized Digital Task Books</h3>
+          <p>Dynamic, fully customizable task books for recruit and probationary tracking, built for training divisions.</p>
         </div>
-        <div class="as-card">
-          <div class="as-feature-icon">4</div>
-          <h3>Notes &amp; Handoffs</h3>
-          <p>Leave trainee and proctor notes directly on a task so context carries across shifts.</p>
-        </div>
-        <div class="as-card">
-          <div class="as-feature-icon">5</div>
-          <h3>Pass / Fail Test Logs</h3>
-          <p>Track scheduled tests and outcomes with clear pass, fail, and pending states.</p>
-        </div>
-        <div class="as-card">
-          <div class="as-feature-icon">6</div>
-          <h3>Team Reporting</h3>
-          <p>Roll shift-level data up into reports your supervisors will actually read.</p>
+        <div class="as-card as-feature-card" data-modal="calpers" tabindex="0" role="button" aria-haspopup="dialog">
+          <span class="as-card-badge is-soon">Coming Late Summer</span>
+          <h3>CalPERS Retirement &amp; Financial Dashboard</h3>
+          <p>Precision CalPERS pension modeling built for California public safety personnel.</p>
         </div>
       </div>
     </div>
@@ -81,45 +72,20 @@
     <div class="container">
       <div class="as-section-header">
         <span class="as-eyebrow">Pricing</span>
-        <h2>Simple, per-shift pricing</h2>
-        <p>Start free while we're in beta. Paid tiers unlock at general availability.</p>
+        <h2>Tailored Agency Solutions</h2>
       </div>
-      <div class="as-pricing-grid">
-        <div class="as-card as-tier">
-          <p class="as-tier-name">Starter</p>
-          <p class="as-tier-price">$0<span>/mo</span></p>
-          <p class="as-tier-desc">For small teams getting off spreadsheets.</p>
-          <ul class="as-tier-features">
-            <li><span class="as-tier-check">✓</span> Up to 10 team members</li>
-            <li><span class="as-tier-check">✓</span> Shift scheduling</li>
-            <li><span class="as-tier-check">✓</span> Task sign-off</li>
-          </ul>
-          <a href="#waitlist" class="as-btn as-btn-ghost as-btn-block" style="color: var(--as-navy); border-color: var(--as-border);">Join Waitlist</a>
-        </div>
-        <div class="as-card as-tier as-tier-featured">
-          <span class="as-tier-badge">Most Popular</span>
-          <p class="as-tier-name">Team</p>
-          <p class="as-tier-price">$29<span>/mo</span></p>
-          <p class="as-tier-desc">For operations teams running multiple shifts.</p>
-          <ul class="as-tier-features">
-            <li><span class="as-tier-check">✓</span> Unlimited team members</li>
-            <li><span class="as-tier-check">✓</span> Test pass/fail tracking</li>
-            <li><span class="as-tier-check">✓</span> Trainee &amp; proctor notes</li>
-            <li><span class="as-tier-check">✓</span> Progress reporting</li>
-          </ul>
-          <a href="#waitlist" class="as-btn as-btn-primary as-btn-block">Join Waitlist</a>
-        </div>
-        <div class="as-card as-tier">
-          <p class="as-tier-name">Enterprise</p>
-          <p class="as-tier-price">Custom</p>
-          <p class="as-tier-desc">For larger orgs with custom workflows.</p>
-          <ul class="as-tier-features">
-            <li><span class="as-tier-check">✓</span> Everything in Team</li>
-            <li><span class="as-tier-check">✓</span> SSO &amp; audit logs</li>
-            <li><span class="as-tier-check">✓</span> Dedicated support</li>
-          </ul>
-          <a href="#waitlist" class="as-btn as-btn-ghost as-btn-block" style="color: var(--as-navy); border-color: var(--as-border);">Contact Us</a>
-        </div>
+      <div class="as-tailored-block">
+        <p>
+          Public safety operations vary widely by agency size, call volume, and deployment
+          framework — so we don't offer cookie-cutter, one-size-fits-all pricing. Instead, we
+          partner closely with departments to build a customized implementation structure
+          around how your agency actually operates.
+        </p>
+        <p>
+          We're currently accepting a select number of agencies for early-access pilot
+          programs, with custom foundational pricing built around your rollout.
+        </p>
+        <a href="#waitlist" class="as-btn as-btn-primary">Request Early Access</a>
       </div>
     </div>
   </section>
@@ -132,7 +98,7 @@
         <form class="as-waitlist-form" id="waitlist-form">
           <div class="as-field">
             <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="you@company.com" required />
+            <input type="email" id="email" name="email" placeholder="you@agency.gov" required />
           </div>
           <button type="submit" class="as-btn as-btn-primary">Notify Me</button>
         </form>
@@ -142,15 +108,52 @@
     </div>
   </section>
 
-  <footer class="as-footer">
+  <footer class="as-footer" id="contact">
     <div class="container">
       <span>&copy; 2026 Active Shift Software. All rights reserved.</span>
       <div class="as-footer-links">
         <a href="#top" class="as-footer-link">Back to top</a>
-        <a href="mailto:hello@activeshiftsoftware.com" class="as-footer-link">Contact</a>
+        <a href="mailto:info@activeshiftsoftware.com" class="as-footer-link">Contact</a>
       </div>
     </div>
   </footer>
+
+  <!-- Modal content templates -->
+  <template id="modal-apparatus">
+    <span class="as-card-badge is-live">In Production / Active Beta</span>
+    <h3>NFC Daily Apparatus Check</h3>
+    <div class="screenshot-placeholder" style="background:#1e293b; color:#94a3b8; padding:40px; text-align:center; border-radius:6px; border:1px dashed #475569; margin-bottom:15px;">[Apparatus Check System Interface Screenshot Coming Soon]</div>
+    <p class="as-modal-text">Transform accountability from a generic clipboard into a real-time operational dashboard. Utilizing secure NFC tap technology, this module ensures personnel physically inspect every single compartment and tool on a rig—preventing skipped logs. An interactive shift-level dashboard instantly highlights missing, misplaced, or expired items, seamlessly passing critical readiness alerts to oncoming teams during shift change.</p>
+  </template>
+
+  <template id="modal-logistics">
+    <span class="as-card-badge is-live">In Production / Active Beta</span>
+    <h3>Station Order Logistics</h3>
+    <div class="screenshot-placeholder" style="background:#1e293b; color:#94a3b8; padding:40px; text-align:center; border-radius:6px; border:1px dashed #475569; margin-bottom:15px;">[Station Supply Portal Preview]</div>
+    <p class="as-modal-text">Streamline internal supply chains with frictionless, web-based ordering. This clean, intuitive interface allows station crews to submit supply, maintenance, or equipment requests in seconds from any terminal or mobile device. Approved requests are automatically routed directly to your agency’s designated purchasing or logistics staff, completely eliminating lost emails, messy paper trails, and accidental double-ordering.</p>
+  </template>
+
+  <template id="modal-taskbooks">
+    <span class="as-card-badge is-soon">Coming Late Summer</span>
+    <h3>Customized Digital Task Books</h3>
+    <div class="screenshot-placeholder" style="background:#1e293b; color:#94a3b8; padding:40px; text-align:center; border-radius:6px; border:1px dashed #475569; margin-bottom:15px;">[Digital Task Book Tracking Dashboard Preview]</div>
+    <p class="as-modal-text">Move away from bulky binders with dynamic recruit and probationary tracking built specifically for training divisions. This module tracks a firefighter or recruit's entire academy and probationary journey through a completely customizable digital framework. Monitor completed manipulative skills in real-time, generate automated quizzes, and log formal phase tests. Fully adaptable to your department's specific rules, formatting, and standard operating guidelines (SOGs).</p>
+  </template>
+
+  <template id="modal-calpers">
+    <span class="as-card-badge is-soon">Coming Late Summer</span>
+    <h3>CalPERS Retirement &amp; Financial Dashboard</h3>
+    <div class="screenshot-placeholder" style="background:#1e293b; color:#94a3b8; padding:40px; text-align:center; border-radius:6px; border:1px dashed #475569; margin-bottom:15px;">[CalPERS Precision Pension Engine Preview]</div>
+    <p class="as-modal-text">A precision financial modeling engine built explicitly for California public safety personnel to navigate the unique complexities of CalPERS pensions, going far beyond the basic calculator on the state website. Features include: True Net-Income Modeling applying progressive tax brackets to show real take-home pay; advanced 'Split-Math' and reciprocity tracking to seamlessly merge classic and PEPRA service tiers across multiple agencies without double-counting total years; built-in public safety shift logic accounting for FLSA cycle adjustments, holiday pay, and accrued leave cash-outs; and a dynamic 'What-If' engine to evaluate lookback dilution or simulate the compounding COLA advantage of choosing a December retirement date over other months to optimize lifetime benefits.</p>
+  </template>
+
+  <!-- Modal overlay -->
+  <div class="as-modal-overlay" id="modal-overlay">
+    <div class="as-modal-content" role="dialog" aria-modal="true">
+      <button type="button" class="as-modal-close" id="modal-close" aria-label="Close">&times;</button>
+      <div id="modal-body"></div>
+    </div>
+  </div>
 
   <script>
     // NOTE: This is a static GitHub Pages site with no backend. Wire this
@@ -161,6 +164,49 @@
       document.getElementById('waitlist-success').classList.add('is-visible');
       this.reset();
     });
+
+    // Feature card modals
+    (function () {
+      const overlay = document.getElementById('modal-overlay');
+      const modalBody = document.getElementById('modal-body');
+      const closeBtn = document.getElementById('modal-close');
+      const cards = document.querySelectorAll('.as-feature-card');
+
+      function openModal(key) {
+        const template = document.getElementById('modal-' + key);
+        if (!template) return;
+        modalBody.innerHTML = '';
+        modalBody.appendChild(template.content.cloneNode(true));
+        overlay.classList.add('is-open');
+        document.body.classList.add('as-modal-active');
+        closeBtn.focus();
+      }
+
+      function closeModal() {
+        overlay.classList.remove('is-open');
+        document.body.classList.remove('as-modal-active');
+      }
+
+      cards.forEach(function (card) {
+        card.addEventListener('click', function () {
+          openModal(card.getAttribute('data-modal'));
+        });
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            openModal(card.getAttribute('data-modal'));
+          }
+        });
+      });
+
+      closeBtn.addEventListener('click', closeModal);
+      overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+      });
+    })();
   </script>
 
 </body>
