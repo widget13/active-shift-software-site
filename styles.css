@@ -274,6 +274,10 @@ a {
   margin: 0 0 0.3rem;
 }
 
+.as-card-h3-light {
+  font-weight: 400;
+}
+
 .as-card h3 {
   font-size: 1.1rem;
   font-weight: 700;
