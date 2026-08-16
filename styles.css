@@ -391,6 +391,21 @@ a {
   margin: 0;
 }
 
+.as-modal-list {
+  color: var(--as-steel);
+  font-size: 0.98rem;
+  margin: 0.5rem 0 1.5rem;
+  padding-left: 1.25rem;
+}
+
+.as-modal-list li {
+  margin-bottom: 0.6rem;
+}
+
+.as-modal-list li:last-child {
+  margin-bottom: 0;
+}
+
 /* Waitlist */
 
 .as-waitlist {
