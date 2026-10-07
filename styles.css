@@ -1,29 +1,55 @@
+/* Dark theme matched to the Retirement & Financial Dashboard
+   (retirement.activeshiftsoftware.com) so the marketing site and the live app read as one
+   product family. Token values mirror that app's --rd-* palette (Sworn track). */
+
 :root {
-  --as-red: #b3121b;
-  --as-red-dark: #8a0d14;
-  --as-navy: #1b2733;
-  --as-steel: #4a5b6b;
-  --as-bg: #f4f5f7;
-  --as-green: #6b9080;
-  --as-green-bg: #e8f0ea;
-  --as-green-text: #1e7e34;
-  --as-amber-bg: #fdf1e8;
-  --as-amber-text: #b3651b;
-  --as-border: #e2e6ea;
+  --as-bg: #2b2b2b;
+  --as-bg-alt: #232526;
+  --as-card: #3c3f41;
+  --as-card-pop: #45494c;
+  --as-modal: #1e1e1e;
+  --as-row: #2b3540;
+  --as-border: #555555;
+  --as-border-soft: #444444;
+  --as-text: #eaeaea;
+  --as-text-muted: #d6d6d6;
+  --as-text-faint: #c4c4c4;
+
+  --as-accent: #1a3a5c;
+  --as-accent-dark: #1a2a3a;
+  --as-badge: #2980b9;
+  --as-info: #3498db;
+  --as-link: #5dade2;
+  --as-success: #2ecc71;
+  --as-success-dark: #27ae60;
+  --as-warning: #e67e22;
+
   --as-radius: 0.5rem;
-  --as-shadow: 0 2px 8px rgba(27, 39, 51, 0.08);
-  --as-shadow-hover: 0 10px 24px rgba(27, 39, 51, 0.16);
+  --as-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --as-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.5);
 }
 
 * {
   box-sizing: border-box;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
 body {
   margin: 0;
   background-color: var(--as-bg);
   font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: var(--as-navy);
+  color: var(--as-text);
   line-height: 1.5;
 }
 
@@ -47,39 +73,44 @@ a {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: var(--as-navy);
-  border-bottom: 4px solid var(--as-red);
+  background-color: var(--as-accent-dark);
+  border-bottom: 3px solid var(--as-badge);
+  box-shadow: var(--as-shadow);
 }
 
 .as-navbar .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 64px;
+  height: 68px;
 }
 
+/* Same ivory plate the Retirement app puts behind the logo - the mark's navy nearly
+   disappears against the dark navbar without it, and pure white washes out the gold. */
 .as-brand {
   display: inline-flex;
   align-items: center;
-  font-weight: 700;
-  font-size: 1.15rem;
-  letter-spacing: 0.03em;
-  color: #fff;
+  background: #efe8d8;
+  padding: 6px 14px;
+  border-radius: 8px;
+  line-height: 0;
   text-decoration: none;
 }
 
-.as-brand-accent {
-  color: var(--as-red);
+.as-brand img {
+  display: block;
+  height: 34px;
+  width: auto;
 }
 
 .as-nav-links {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .as-nav-links a {
-  color: #c8d1d9;
+  color: var(--as-text-muted);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 600;
@@ -89,17 +120,17 @@ a {
   color: #fff;
 }
 
+/* Green like the Retirement app's "Sign In" button - this CTA takes members to sign in. */
 .as-nav-cta {
-  background-color: var(--as-red);
+  background-color: var(--as-success-dark);
   color: #fff !important;
-  padding: 0.45rem 1rem;
+  padding: 0.4rem 0.95rem;
   border-radius: 0.35rem;
   transition: background-color 0.12s ease;
 }
 
 .as-nav-cta:hover {
-  background-color: var(--as-red-dark);
-  color: #fff !important;
+  background-color: #1e8449;
 }
 
 /* Buttons */
@@ -108,45 +139,68 @@ a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 0.35rem;
   font-weight: 600;
   font-size: 0.95rem;
+  font-family: inherit;
   padding: 0.7rem 1.4rem;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.12s ease, transform 0.12s ease, box-shadow 0.12s ease;
+  transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
 }
 
 .as-btn-primary {
-  background-color: var(--as-red);
+  background-color: var(--as-badge);
+  border-color: var(--as-badge);
   color: #fff;
 }
 
 .as-btn-primary:hover {
-  background-color: var(--as-red-dark);
+  background-color: var(--as-accent);
+  border-color: var(--as-accent);
 }
 
 .as-btn-ghost {
   background-color: transparent;
   color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .as-btn-ghost:hover {
   border-color: #fff;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+.as-btn-outline {
+  background-color: transparent;
+  color: var(--as-text);
+  border-color: var(--as-border);
+}
+
+.as-btn-outline:hover {
+  border-color: var(--as-text-muted);
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 .as-btn-block {
   width: 100%;
 }
 
+.as-btn:focus-visible,
+.as-nav-links a:focus-visible,
+.as-announce:focus-visible {
+  outline: 2px solid var(--as-link);
+  outline-offset: 2px;
+}
+
 /* Hero */
 
 .as-hero {
-  background-color: var(--as-navy);
+  background-color: var(--as-accent);
   color: #fff;
   padding: 4.5rem 0 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .as-hero .container {
@@ -162,9 +216,10 @@ a {
 }
 
 .as-hero p {
-  color: #c8d1d9;
-  font-size: 0.95rem;
-  margin: 0 0 2.25rem;
+  color: #d6dee6;
+  font-size: 1rem;
+  max-width: 680px;
+  margin: 0 auto 2.25rem;
 }
 
 .as-hero-actions {
@@ -173,6 +228,38 @@ a {
   justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.as-announce {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+  padding: 0.35rem 1rem 0.35rem 0.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #e6ebef;
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color 0.12s ease;
+}
+
+.as-announce:hover {
+  border-color: var(--as-success);
+}
+
+.as-announce-tag {
+  background-color: var(--as-success-dark);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 /* Section headings */
@@ -188,7 +275,7 @@ a {
 }
 
 .as-eyebrow {
-  color: var(--as-red);
+  color: var(--as-link);
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -201,11 +288,11 @@ a {
   font-weight: 700;
   font-size: 2rem;
   margin: 0 0 0.75rem;
-  color: var(--as-navy);
+  color: var(--as-text);
 }
 
 .as-section-header p {
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   font-size: 1.05rem;
   margin: 0;
 }
@@ -219,13 +306,14 @@ a {
 }
 
 .as-card {
-  background-color: #fff;
+  background-color: var(--as-card);
   border-radius: var(--as-radius);
-  border-top: 4px solid var(--as-red);
+  border-top: 4px solid var(--as-badge);
   box-shadow: var(--as-shadow);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
   padding: 1.75rem;
   height: 100%;
+  color: var(--as-text);
 }
 
 .as-feature-card {
@@ -236,10 +324,30 @@ a {
 .as-feature-card:focus-visible {
   transform: translateY(-5px);
   box-shadow: var(--as-shadow-hover);
+  background-color: var(--as-card-pop);
+}
+
+.as-feature-card.is-featured {
+  display: flex;
+  flex-direction: column;
+  border-top-color: var(--as-success-dark);
+  text-decoration: none;
+}
+
+.as-feature-card.is-featured .as-card-badge {
+  align-self: flex-start;
+}
+
+.as-card-link {
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--as-success);
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .as-feature-card:focus-visible {
-  outline: 2px solid var(--as-red);
+  outline: 2px solid var(--as-link);
   outline-offset: 2px;
 }
 
@@ -255,13 +363,15 @@ a {
 }
 
 .as-card-badge.is-live {
-  background-color: var(--as-green-bg);
-  color: var(--as-green-text);
+  background-color: rgba(46, 204, 113, 0.15);
+  color: var(--as-success);
+  border: 1px solid rgba(46, 204, 113, 0.35);
 }
 
 .as-card-badge.is-soon {
-  background-color: var(--as-amber-bg);
-  color: var(--as-amber-text);
+  background-color: rgba(230, 126, 34, 0.15);
+  color: #f0a35e;
+  border: 1px solid rgba(230, 126, 34, 0.4);
 }
 
 .as-card-kicker {
@@ -270,7 +380,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--as-red);
+  color: var(--as-link);
   margin: 0 0 0.3rem;
 }
 
@@ -282,21 +392,150 @@ a {
   font-size: 1.1rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
-  color: var(--as-navy);
+  color: var(--as-text);
 }
 
 .as-card p {
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   font-size: 0.95rem;
   margin: 0;
+}
+
+/* Retirement dashboard spotlight */
+
+.as-spotlight {
+  background-color: var(--as-bg-alt);
+  border-top: 1px solid var(--as-border-soft);
+  border-bottom: 1px solid var(--as-border-soft);
+}
+
+.as-spotlight-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.as-spotlight-media {
+  margin: 0;
+}
+
+.as-spotlight-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--as-radius);
+  border: 1px solid var(--as-border-soft);
+  box-shadow: var(--as-shadow-hover);
+}
+
+.as-spotlight-media figcaption {
+  color: var(--as-text-faint);
+  font-size: 0.8rem;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.as-check-list {
+  list-style: none;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  color: var(--as-text-muted);
+  font-size: 0.95rem;
+}
+
+.as-check-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.as-check-list li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--as-success);
+  font-weight: 700;
+}
+
+.as-check-list strong {
+  color: #fff;
+}
+
+.as-price-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.as-price {
+  flex: 1 1 10rem;
+  background-color: var(--as-row);
+  border-top: 3px solid var(--as-success-dark);
+  border-radius: var(--as-radius);
+  box-shadow: var(--as-shadow);
+  padding: 0.9rem 1.1rem;
+}
+
+.as-price-amount {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--as-success);
+  margin-right: 0.35rem;
+}
+
+.as-price-term {
+  color: var(--as-text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.as-price-note {
+  color: var(--as-text-faint);
+  font-size: 0.85rem;
+  margin: 0.9rem 0 1.5rem;
+}
+
+.as-spotlight-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.as-spotlight-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin: 1.25rem 0 0;
+  font-size: 0.88rem;
+}
+
+.as-spotlight-links a {
+  color: var(--as-link);
+  font-weight: 600;
+}
+
+.as-spotlight-links a:hover {
+  color: #fff;
+}
+
+.as-disclaimer {
+  color: var(--as-text-faint);
+  font-size: 0.75rem;
+  text-align: center;
+  max-width: 760px;
+  margin: 3rem auto 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--as-border-soft);
 }
 
 /* Tailored agency solutions */
 
 .as-tailored-block {
-  background-color: #fff;
+  background-color: var(--as-card);
   border-radius: var(--as-radius);
-  border-top: 4px solid var(--as-red);
+  border-top: 4px solid var(--as-badge);
   box-shadow: var(--as-shadow);
   padding: 3rem;
   text-align: center;
@@ -305,7 +544,7 @@ a {
 }
 
 .as-tailored-block p {
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   font-size: 1.05rem;
   margin: 0 0 1.25rem;
 }
@@ -319,7 +558,7 @@ a {
 .as-modal-overlay {
   position: fixed;
   inset: 0;
-  background-color: rgba(15, 23, 42, 0.72);
+  background-color: rgba(0, 0, 0, 0.75);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -336,9 +575,11 @@ a {
 }
 
 .as-modal-content {
-  background-color: #fff;
+  background-color: var(--as-modal);
+  color: var(--as-text);
+  border: 1px solid var(--as-border-soft);
   border-radius: var(--as-radius);
-  border-top: 4px solid var(--as-red);
+  border-top: 4px solid var(--as-badge);
   max-width: 640px;
   width: 100%;
   max-height: 85vh;
@@ -361,8 +602,8 @@ a {
   width: 2.25rem;
   height: 2.25rem;
   border: none;
-  background-color: var(--as-bg);
-  color: var(--as-navy);
+  background-color: var(--as-card);
+  color: var(--as-text);
   font-size: 1.2rem;
   line-height: 1;
   font-weight: 700;
@@ -375,24 +616,29 @@ a {
 }
 
 .as-modal-close:hover {
-  background-color: var(--as-border);
+  background-color: var(--as-card-pop);
+}
+
+.as-modal-close:focus-visible {
+  outline: 2px solid var(--as-link);
+  outline-offset: 2px;
 }
 
 .as-modal-content h3 {
   font-size: 1.4rem;
   font-weight: 700;
   margin: 0 0 1rem;
-  color: var(--as-navy);
+  color: var(--as-text);
 }
 
 .as-modal-text {
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   font-size: 0.98rem;
   margin: 0;
 }
 
 .as-modal-list {
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   font-size: 0.98rem;
   margin: 0.5rem 0 1.5rem;
   padding-left: 1.25rem;
@@ -406,16 +652,27 @@ a {
   margin-bottom: 0;
 }
 
+.as-screenshot-placeholder {
+  background-color: var(--as-row);
+  color: var(--as-text-faint);
+  border: 1px dashed var(--as-border);
+  border-radius: 6px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
 /* Waitlist */
 
 .as-waitlist {
-  background-color: var(--as-navy);
+  background-color: var(--as-accent-dark);
+  border-top: 3px solid var(--as-badge);
 }
 
 .as-waitlist-card {
-  background-color: #fff;
+  background-color: var(--as-card);
   border-radius: var(--as-radius);
-  border-top: 4px solid var(--as-red);
+  border-top: 4px solid var(--as-success-dark);
   box-shadow: var(--as-shadow);
   max-width: 640px;
   margin: 0 auto;
@@ -427,11 +684,11 @@ a {
   font-weight: 700;
   font-size: 1.6rem;
   margin: 0 0 0.5rem;
-  color: var(--as-navy);
+  color: var(--as-text);
 }
 
 .as-waitlist-card > p {
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   margin: 0 0 2rem;
 }
 
@@ -452,7 +709,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--as-steel);
+  color: var(--as-text-muted);
   margin-bottom: 0.4rem;
 }
 
@@ -462,14 +719,18 @@ a {
   padding: 0.7rem 0.9rem;
   font-size: 0.95rem;
   font-family: inherit;
-  color: var(--as-navy);
-  background-color: #fff;
+  color: var(--as-text);
+  background-color: var(--as-row);
+}
+
+.as-field input::placeholder {
+  color: #9aa5b1;
 }
 
 .as-field input:focus {
   outline: none;
-  border-color: var(--as-red);
-  box-shadow: 0 0 0 3px rgba(179, 18, 27, 0.12);
+  border-color: var(--as-info);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.3);
 }
 
 .as-waitlist-form .as-btn {
@@ -478,7 +739,7 @@ a {
 }
 
 .as-field-help {
-  color: var(--as-steel);
+  color: var(--as-text-faint);
   font-size: 0.75rem;
   margin-top: 1rem;
 }
@@ -487,8 +748,9 @@ a {
   display: none;
   align-items: center;
   gap: 0.6rem;
-  background-color: var(--as-green-bg);
-  color: var(--as-green-text);
+  background-color: rgba(46, 204, 113, 0.15);
+  border: 1px solid rgba(46, 204, 113, 0.35);
+  color: var(--as-success);
   font-weight: 600;
   font-size: 0.9rem;
   border-radius: 0.4rem;
@@ -503,7 +765,8 @@ a {
 /* Footer */
 
 .as-footer {
-  color: var(--as-steel);
+  background-color: var(--as-modal);
+  color: var(--as-text-faint);
   font-size: 0.85rem;
   padding: 2.5rem 0;
 }
@@ -522,12 +785,12 @@ a {
 }
 
 .as-footer-link {
-  color: var(--as-steel);
+  color: var(--as-text-faint);
   text-decoration: underline;
 }
 
 .as-footer-link:hover {
-  color: var(--as-red);
+  color: #fff;
 }
 
 /* Responsive */
@@ -539,8 +802,13 @@ a {
 }
 
 @media (max-width: 860px) {
-  .as-nav-links {
+  .as-nav-links a:not(.as-nav-cta) {
     display: none;
+  }
+
+  .as-spotlight-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .as-hero h1 {
@@ -562,11 +830,50 @@ a {
 }
 
 @media (max-width: 560px) {
+  .container {
+    padding: 0 1rem;
+  }
+
   .as-features-grid {
     grid-template-columns: 1fr;
   }
 
-  .as-tailored-block {
-    padding: 2rem 1.5rem;
+  .as-brand {
+    padding: 5px 10px;
+  }
+
+  .as-brand img {
+    height: 28px;
+  }
+
+  .as-nav-cta {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.82rem;
+  }
+
+  .as-hero {
+    padding: 3rem 0 2.75rem;
+  }
+
+  .as-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .as-section {
+    padding: 3.25rem 0;
+  }
+
+  .as-spotlight-actions .as-btn,
+  .as-hero-actions .as-btn {
+    width: 100%;
+  }
+
+  .as-tailored-block,
+  .as-waitlist-card {
+    padding: 2rem 1.25rem;
+  }
+
+  .as-modal-content {
+    padding: 2.75rem 1.25rem 1.5rem;
   }
 }
