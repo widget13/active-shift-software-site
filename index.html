@@ -13,34 +13,72 @@
   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16.png" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
-  <meta name="theme-color" content="#1a2a3a" />
+  <meta name="theme-color" content="#0f1724" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <header class="as-navbar">
+  <div class="as-navwrap">
     <div class="container">
-      <a href="#top" class="as-brand"><img src="img/logo-lockup.png" alt="Active Shift Software" width="600" height="181" /></a>
-      <nav class="as-nav-links">
-        <a href="#features">Features</a>
-        <a href="#retirement">Retirement Dashboard</a>
-        <a href="#contact">Contact</a>
-        <a href="https://retirement.activeshiftsoftware.com/" class="as-nav-cta">Open Dashboard</a>
-      </nav>
+      <header class="as-navbar">
+        <a href="#top" class="as-brand" aria-label="Active Shift Software home"><span class="as-brand-mark" aria-hidden="true">A</span>Active Shift <span class="as-brand-light">Software</span></a>
+        <nav class="as-nav-links" aria-label="Main">
+          <a href="#features" class="as-pill">Products</a>
+          <a href="#retirement" class="as-pill">Retirement Dashboard</a>
+          <a href="#contact" class="as-pill">Contact</a>
+          <a href="https://retirement.activeshiftsoftware.com/demo/" class="as-btn as-btn-demo as-btn-sm">&#9654; Try the Demo</a>
+          <a href="https://retirement.activeshiftsoftware.com/" class="as-btn as-btn-primary as-btn-sm">Open Dashboard</a>
+        </nav>
+      </header>
     </div>
-  </header>
+  </div>
 
   <section class="as-hero" id="top">
-    <div class="container">
-      <a href="#retirement" class="as-announce">
-        <span class="as-announce-tag">Live Now</span>
-        The Retirement &amp; Financial Dashboard is open to members <span aria-hidden="true">&rarr;</span>
-      </a>
-      <h1>Built by the shift,<br>for the shift.</h1>
-      <p>Software made by a public safety member for the people who work it — from apparatus checks to retirement planning.</p>
-      <div class="as-hero-actions">
-        <a href="https://retirement.activeshiftsoftware.com/" class="as-btn as-btn-primary">Open the Retirement Dashboard</a>
-        <a href="#features" class="as-btn as-btn-ghost">See All Products</a>
+    <div class="container as-hero-grid">
+      <div>
+        <a href="#retirement" class="as-announce">
+          <span class="as-announce-tag">Live Now</span>
+          The Retirement &amp; Financial Dashboard is open to members <span aria-hidden="true">&rarr;</span>
+        </a>
+        <span class="as-eyebrow">For Police, Fire &amp; City Employees</span>
+        <h1>Built by the shift,<br><span class="is-blue">for the shift.</span></h1>
+        <p class="as-hero-lead">Software made by a public safety member for the people who work it &mdash; <strong>from apparatus checks to retirement planning.</strong></p>
+        <div class="as-hero-actions">
+          <a href="https://retirement.activeshiftsoftware.com/demo/" class="as-btn as-btn-demo">&#9654; Try the Demo &mdash; no sign-up</a>
+          <a href="https://retirement.activeshiftsoftware.com/" class="as-btn as-btn-primary">Open the Dashboard</a>
+        </div>
+      </div>
+
+      <div class="as-preview" aria-label="Example Retirement Dashboard preview">
+        <span class="as-preview-badge">Example preview</span>
+        <div class="as-preview-grid">
+          <div class="as-tile">
+            <div class="as-tile-label">Target Retirement Date</div>
+            <div class="as-tile-big">June 14, 2031</div>
+            <div class="as-tile-bar"><i></i></div>
+            <div class="as-tile-sub">You have 4 years, 7 months left</div>
+          </div>
+          <div class="as-tile">
+            <div class="as-tile-label">PTO Walk-Away Day</div>
+            <div class="as-tile-big">March 2, 2031</div>
+            <div class="as-tile-sub">That's 412 shifts left</div>
+          </div>
+          <div class="as-tile">
+            <div class="as-tile-label">Monthly Take-Home</div>
+            <div class="as-tile-big is-money">$7,240</div>
+            <div class="as-tile-sub">after taxes</div>
+          </div>
+          <div class="as-tile">
+            <div class="as-tile-label">Yearly Take-Home</div>
+            <div class="as-tile-big is-money">$86,880</div>
+            <div class="as-tile-sub">after taxes</div>
+          </div>
+          <div class="as-tile is-wide">
+            <div class="as-tile-label">What-If Scenario Example</div>
+            <div class="as-tile-big" style="font-size: 1.02rem;">If you move to Texas <span aria-hidden="true">&rarr;</span> <span class="is-green">+$410/mo take-home</span></div>
+            <div class="as-tile-sub">No state income tax there on your pension</div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -48,61 +86,66 @@
   <section class="as-section" id="features">
     <div class="container">
       <div class="as-section-header">
-        <span class="as-eyebrow">Features</span>
+        <span class="as-eyebrow">Products</span>
         <h2>Our Product Line</h2>
         <p>Purpose-built software solving real operational problems inside public safety agencies.</p>
       </div>
       <div class="as-features-grid">
         <a href="#retirement" class="as-card as-feature-card is-featured">
-          <span class="as-card-badge is-live">Live Now</span>
+          <div class="as-card-top"><span class="as-iconchip is-green" aria-hidden="true">$</span><span class="as-badge is-live">Live Now</span></div>
           <h3>Retirement &amp; Financial Dashboard</h3>
-          <p>Pension estimates built from your agency's MOU — net take-home, PTO walk-away date, and unlimited what-ifs.</p>
+          <p>Pension estimates built from your agency's MOU &mdash; net take-home, PTO walk-away date, and unlimited what-ifs.</p>
           <span class="as-card-link">See the dashboard <span aria-hidden="true">&rarr;</span></span>
         </a>
         <div class="as-card as-feature-card" data-modal="apparatus" tabindex="0" role="button" aria-haspopup="dialog">
-          <span class="as-card-badge is-live">In Production / Beta Testing Starting Soon</span>
+          <div class="as-card-top"><span class="as-iconchip" aria-hidden="true">&#10003;</span><span class="as-badge is-beta">In Production / Beta Testing Starting Soon</span></div>
           <span class="as-card-kicker">Apparatus Daily and Monthly Checks</span>
           <h3>Active Shift Apparatus Readiness System <span class="as-card-h3-light">(ASARS)</span></h3>
           <p>Secure NFC tap verification for every compartment and tool on the rig, with real-time shift dashboards.</p>
+          <span class="as-card-link">Learn more <span aria-hidden="true">&rarr;</span></span>
         </div>
         <div class="as-card as-feature-card" data-modal="logistics" tabindex="0" role="button" aria-haspopup="dialog">
-          <span class="as-card-badge is-soon">Coming Soon</span>
+          <div class="as-card-top"><span class="as-iconchip" aria-hidden="true">&#8644;</span><span class="as-badge is-soon">Coming Soon</span></div>
           <h3>Station Order Logistics</h3>
           <p>Frictionless web-based ordering that routes supply, maintenance, and equipment requests straight to logistics.</p>
+          <span class="as-card-link">Learn more <span aria-hidden="true">&rarr;</span></span>
         </div>
         <div class="as-card as-feature-card" data-modal="taskbooks" tabindex="0" role="button" aria-haspopup="dialog">
-          <span class="as-card-badge is-soon">Beta Testing Starting Soon</span>
+          <div class="as-card-top"><span class="as-iconchip" aria-hidden="true">&#9745;</span><span class="as-badge is-soon">Beta Testing Starting Soon</span></div>
           <h3>Customized Digital Task Books</h3>
           <p>Dynamic, fully customizable task books for recruit and probationary tracking, built for training divisions.</p>
+          <span class="as-card-link">Learn more <span aria-hidden="true">&rarr;</span></span>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="as-section as-spotlight" id="retirement">
+  <section class="as-section" id="retirement">
     <div class="container">
       <div class="as-section-header">
         <span class="as-eyebrow">Live Now</span>
         <h2>Retirement &amp; Financial Dashboard</h2>
-        <p>See your retirement number. A pension calculator built for California city and public safety employees — CalPERS members and non-CalPERS systems alike (SFERS, county fire district plans, and others).</p>
+        <p>See your retirement number. A pension calculator built for California city and public safety employees &mdash; CalPERS members and non-CalPERS systems alike (SFERS, county fire district plans, and others).</p>
       </div>
-      <div class="as-spotlight-grid">
+      <div class="as-card as-spotlight-card">
         <figure class="as-spotlight-media">
           <img src="img/retirement-dashboard-preview.jpg" alt="Example dashboard showing a target retirement date, PTO walk-away day with shifts left, monthly and yearly take-home pension, and a what-if scenario" width="1200" height="883" loading="lazy" />
-          <figcaption>Example preview — your dashboard is built from your own agency, tier, and pay.</figcaption>
+          <figcaption>Example preview &mdash; your dashboard is built from your own agency, tier, and pay.</figcaption>
         </figure>
         <div class="as-spotlight-body">
           <ul class="as-check-list">
-            <li><strong>Built from your real MOU</strong> — every department is configured from its own contract, pay steps, and retirement tier, not a generic statewide formula.</li>
-            <li><strong>True net take-home</strong> — federal and state tax brackets applied so you see what actually hits your account, including retiree health costs month by month.</li>
-            <li><strong>PTO walk-away date</strong> — your projected last working day and how many shifts you have left, with FLSA-aware overtime and leave cash-out logic.</li>
-            <li><strong>Unlimited what-ifs</strong> — one more year, a different date, a raise, moving out of state, survivor elections, and COLA timing, side by side.</li>
-            <li><strong>Years out? Grow it now</strong> — see what a promotion, specialty pay, a service-credit buy-back, or an early 457 start adds up to, and when you're vested.</li>
-            <li><strong>Reciprocity &amp; multi-tier blending</strong> — Classic and PEPRA service across multiple agencies, merged without double-counting.</li>
+            <li><span><strong>Built from your real MOU</strong> &mdash; every department is configured from its own contract, pay steps, and retirement tier, not a generic statewide formula.</span></li>
+            <li><span><strong>True net take-home</strong> &mdash; federal and state tax brackets applied so you see what actually hits your account, including retiree health costs month by month.</span></li>
+            <li><span><strong>PTO walk-away date</strong> &mdash; your projected last working day and how many shifts you have left, with FLSA-aware overtime and leave cash-out logic.</span></li>
+            <li><span><strong>Unlimited what-ifs</strong> &mdash; one more year, a different date, a raise, moving out of state, survivor elections, and COLA timing, side by side.</span></li>
+            <li><span><strong>Years out? Grow it now</strong> &mdash; see what a promotion, specialty pay, a service-credit buy-back, or an early 457 start adds up to, and when you're vested.</span></li>
+            <li><span><strong>Reciprocity &amp; multi-tier blending</strong> &mdash; Classic and PEPRA service across multiple agencies, merged without double-counting.</span></li>
           </ul>
+          <span class="as-greenbadge">Free for 5 days</span>
           <div class="as-price-row">
-            <div class="as-price"><span class="as-price-amount">$5</span><span class="as-price-term">/ month</span></div>
-            <div class="as-price"><span class="as-price-amount">$50</span><span class="as-price-term">/ year · 2 months free</span></div>
+            <div class="as-price"><b>$5</b><small>per month</small></div>
+            <div class="as-price"><b>$50</b><small>per year &middot; 2 months free</small></div>
+            <div class="as-price"><b>Group</b><small>through your union</small></div>
           </div>
           <p class="as-price-note">Every plan starts with a 5-day full-access free trial. A card is required to start; you're not charged until day 5, and you can cancel anytime in one click.</p>
           <div class="as-spotlight-actions">
@@ -110,73 +153,62 @@
             <a href="https://retirement.activeshiftsoftware.com/" class="as-btn as-btn-outline">Sign In</a>
           </div>
           <p class="as-spotlight-links">
-            <a href="https://retirement.activeshiftsoftware.com/supported-agencies/">Supported agencies</a>
-            <a href="https://retirement.activeshiftsoftware.com/pricing/">Full pricing &amp; comparison</a>
-            <a href="https://retirement.activeshiftsoftware.com/group-inquiry/">Union &amp; association group plans</a>
+            <a href="https://retirement.activeshiftsoftware.com/supported-agencies/" class="as-pill">Supported agencies</a>
+            <a href="https://retirement.activeshiftsoftware.com/pricing/" class="as-pill">Full pricing &amp; comparison</a>
+            <a href="https://retirement.activeshiftsoftware.com/group-inquiry/" class="as-pill">Union &amp; association group plans</a>
           </p>
         </div>
       </div>
-      <p class="as-disclaimer">Independent &amp; unofficial — not affiliated with or endorsed by CalPERS, SFERS, or any pension system, agency, or union. Figures are planning estimates, not financial advice; always confirm official numbers with your retirement system.</p>
+      <p class="as-disclaimer">Independent &amp; unofficial &mdash; not affiliated with or endorsed by CalPERS, SFERS, or any pension system, agency, or union. Figures are planning estimates, not financial advice; always confirm official numbers with your retirement system.</p>
     </div>
   </section>
 
   <section class="as-section" id="pricing">
-    <div class="container">
-      <div class="as-section-header">
+    <div class="container as-split">
+      <div class="as-card">
         <span class="as-eyebrow">Pricing</span>
         <h2>Tailored Agency Solutions</h2>
+        <p>Public safety operations vary widely by agency size, call volume, and deployment framework &mdash; so we don't offer cookie-cutter, one-size-fits-all pricing. Instead, we partner closely with departments to build a customized implementation structure around how your agency actually operates.</p>
+        <p>We're currently accepting a select number of agencies for early-access pilot programs, with custom foundational pricing built around your rollout.</p>
+        <a href="#waitlist" class="as-btn as-btn-outline">Request Early Access</a>
       </div>
-      <div class="as-tailored-block">
-        <p>
-          Public safety operations vary widely by agency size, call volume, and deployment
-          framework — so we don't offer cookie-cutter, one-size-fits-all pricing. Instead, we
-          partner closely with departments to build a customized implementation structure
-          around how your agency actually operates.
-        </p>
-        <p>
-          We're currently accepting a select number of agencies for early-access pilot
-          programs, with custom foundational pricing built around your rollout.
-        </p>
-        <a href="#waitlist" class="as-btn as-btn-primary">Request Early Access</a>
-      </div>
-    </div>
-  </section>
 
-  <section class="as-section as-waitlist" id="waitlist">
-    <div class="container">
-      <div class="as-waitlist-card">
+      <div class="as-card as-waitlist-card" id="waitlist">
+        <span class="as-eyebrow">Stay in the loop</span>
         <h2>Join the Waitlist</h2>
         <p>The Retirement Dashboard is live today. Get launch updates for ASARS, Digital Task Books, and Station Order Logistics. No spam.</p>
         <form class="as-waitlist-form" id="waitlist-form">
           <div class="as-field">
-            <label for="email">Email address</label>
+            <label for="email" class="visually-hidden">Email address</label>
             <input type="email" id="email" name="email" placeholder="you@agency.gov" required />
           </div>
           <button type="submit" class="as-btn as-btn-primary">Notify Me</button>
         </form>
         <p class="as-field-help">We'll only email you about the Active Shift launch.</p>
-        <div class="as-waitlist-success" id="waitlist-success">✓ You're on the list — we'll be in touch.</div>
+        <div class="as-waitlist-success" id="waitlist-success">&#10003; You're on the list &mdash; we'll be in touch.</div>
       </div>
     </div>
   </section>
 
   <footer class="as-footer" id="contact">
     <div class="container">
-      <div>
-        <span>&copy; 2026 Active Shift Software. Built by a public safety member, for public safety.</span>
-        <p class="as-footer-note">Figures are planning estimates, not financial advice. Always confirm official numbers with your retirement system.</p>
-      </div>
-      <div class="as-footer-links">
-        <a href="https://retirement.activeshiftsoftware.com/" class="as-footer-link">Retirement Dashboard</a>
-        <a href="#top" class="as-footer-link">Back to top</a>
-        <a href="mailto:info@activeshiftsoftware.com" class="as-footer-link">Contact</a>
+      <div class="as-footer-inner">
+        <div>
+          <span>&copy; 2026 Active Shift Software. Built by a public safety member, for public safety.</span>
+          <p class="as-footer-note">Figures are planning estimates, not financial advice. Always confirm official numbers with your retirement system.</p>
+        </div>
+        <div class="as-footer-links">
+          <a href="https://retirement.activeshiftsoftware.com/" class="as-pill">Retirement Dashboard</a>
+          <a href="#top" class="as-pill">Back to top</a>
+          <a href="mailto:info@activeshiftsoftware.com" class="as-pill">Contact</a>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- Modal content templates -->
   <template id="modal-apparatus">
-    <span class="as-card-badge is-live">In Production / Beta Testing Starting Soon</span>
+    <span class="as-badge is-beta">In Production / Beta Testing Starting Soon</span>
     <span class="as-card-kicker">Apparatus Daily and Monthly Checks</span>
     <h3>Active Shift Apparatus Readiness System <span class="as-card-h3-light">(ASARS)</span></h3>
     <div class="as-screenshot-placeholder">[Apparatus Check System Interface Screenshot Coming Soon]</div>
@@ -184,14 +216,14 @@
   </template>
 
   <template id="modal-logistics">
-    <span class="as-card-badge is-soon">Coming Soon</span>
+    <span class="as-badge is-soon">Coming Soon</span>
     <h3>Station Order Logistics</h3>
     <div class="as-screenshot-placeholder">[Station Supply Portal Preview]</div>
     <p class="as-modal-text">Streamline internal supply chains with frictionless, web-based ordering. This clean, intuitive interface allows station crews to submit supply, maintenance, or equipment requests in seconds from any terminal or mobile device. Approved requests are automatically routed directly to your agency’s designated purchasing or logistics staff, completely eliminating lost emails, messy paper trails, and accidental double-ordering.</p>
   </template>
 
   <template id="modal-taskbooks">
-    <span class="as-card-badge is-soon">Beta Testing Starting Soon</span>
+    <span class="as-badge is-soon">Beta Testing Starting Soon</span>
     <h3>Customized Digital Task Books</h3>
     <div class="as-screenshot-placeholder">[Digital Task Book Tracking Dashboard Preview]</div>
     <p class="as-modal-text">Move away from bulky binders with dynamic recruit and probationary tracking built specifically for training divisions. This module tracks a firefighter or recruit's entire academy and probationary journey through a completely customizable digital framework. Monitor completed manipulative skills in real-time, generate automated quizzes, and log formal phase tests. Fully adaptable to your department's specific rules, formatting, and standard operating guidelines (SOGs).</p>
